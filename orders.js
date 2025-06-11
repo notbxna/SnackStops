@@ -1,39 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('orderForm');
-  const ordersList = document.getElementById('ordersList');
-
-  const loadOrders = () => {
-    const orders = JSON.parse(localStorage.getItem('snackOrders') || '[]');
-    ordersList.innerHTML = '';
-    orders.forEach(order => {
-      const li = document.createElement('li');
-      li.textContent = `${order.name} - ${order.item} at ${order.time}, ${order.location} [${order.fruits.join(', ')}]`;
-      ordersList.appendChild(li);
-    });
-  };
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const fruits = [];
-      form.querySelectorAll('input[name="fruit"]:checked').forEach(cb => fruits.push(cb.value));
-
-      const order = {
-        item: data.get('item'),
-        fruits,
-        time: data.get('time'),
-        location: data.get('location'),
-        name: data.get('name'),
-      };
-
-      const orders = JSON.parse(localStorage.getItem('snackOrders') || '[]');
-      orders.push(order);
-      localStorage.setItem('snackOrders', JSON.stringify(orders));
-      loadOrders();
-      form.reset();
-    });
+<script>
+  function addToCart(item) {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Added to cart!");
   }
 
-  loadOrders();
-});
+  document.addEventListener('DOMContentLoaded', () => {
+    const cartList = document.getElementById('cartItems');
+    const form = document.getElementById('checkoutForm');
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+    if (cartList) {
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+    }
+
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const order = {
+          name: data.get('name'),
+          time: data.get('time'),
+          location: data.get('location'),
+          items: cart
+        };
+
+        const allOrders = JSON.parse(localStorage.getItem('allOrders') || '[]');
+        allOrders.push(order);
+        localStorage.setItem('allOrders', JSON.stringify(allOrders));
+        localStorage.removeItem('cart');
+        alert('Order submitted!');
+        form.reset();
+        window.location.href = 'index.html';
+      });
+    }
+  });
+</script>
