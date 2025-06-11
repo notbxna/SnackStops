@@ -1,52 +1,55 @@
 body {
   font-family: Arial, sans-serif;
+  background: #f9f9f9;
   margin: 0;
   padding: 0;
-  background: #fdfdfd;
-  color: #333;
 }
 
 nav {
-  background: #ffb347;
+  background-color: #f8a100;
   padding: 1em;
   display: flex;
   justify-content: space-around;
 }
 
 nav a {
-  color: #fff;
-  font-weight: bold;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-header.banner {
+.banner {
   text-align: center;
   padding: 2em;
-  background: #ffe0b2;
+  background-color: #ffe6b3;
 }
 
 main {
   padding: 2em;
 }
 
-h2, h3 {
-  color: #d35400;
+ul {
+  list-style-type: none;
 }
 
-form label, form fieldset {
+form label {
   display: block;
   margin: 1em 0;
 }
 
-form input[type="text"], form select {
-  width: 100%;
+form input, form button {
   padding: 0.5em;
+  width: 100%;
+  margin-top: 0.5em;
 }
 
 form button {
-  background: #ff7f50;
-  color: #fff;
+  background-color: #ff9900;
+  color: white;
   border: none;
-  padding: 0.75em;
   cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e68a00;
 }
