@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SnackStop - Cart</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <script src="orders.js" defer></script>
 </head>
 <body>
@@ -12,16 +12,19 @@
     <a href="food.html">Food</a>
     <a href="drinks.html">Drinks</a>
     <a href="custom.html">Custom</a>
+    <a href="cart.html">Cart</a>
   </nav>
+
   <main>
-    <h2>Your Cart</h2>
+    <h1>Your Cart</h1>
     <ul id="cartItems"></ul>
 
+    <h2>Checkout</h2>
     <form id="checkoutForm">
-      <label>What Time? <input type="text" name="time" required /></label>
-      <label>Where? <input type="text" name="location" required /></label>
-      <label>Name? <input type="text" name="name" required /></label>
-      <button type="submit">Submit Order</button>
+      <label>Name: <input type="text" name="name" required></label>
+      <label>Time: <input type="text" name="time" required></label>
+      <label>Location: <input type="text" name="location" required></label>
+      <button type="submit">Place Order</button>
     </form>
   </main>
 </body>
