@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>SnackStop - Food</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="orders.js" defer></script>
 </head>
 <body>
   <nav>
@@ -11,23 +12,19 @@
     <a href="food.html">Food</a>
     <a href="drinks.html">Drinks</a>
     <a href="custom.html">Custom</a>
+    <a href="cart.html">Cart</a>
   </nav>
-
   <main>
-    <h2>Sweets & Treats</h2>
+    <h1>Snacks & Treats</h1>
     <ul>
-      <li>Rice Krispies - $0.99</li>
-      <li>Chocolate Chip Cookies - $0.99</li>
-      <li>Goldfish - $1.50</li>
-    </ul>
-
-    <h2>Chips</h2>
-    <ul>
-      <li>Doritos Red - $1.50</li>
-      <li>Doritos Blue - $1.50</li>
-      <li>Cheddar Popcorn - $0.99</li>
-      <li>Lays - $0.99</li>
-      <li>Barbecue Lays - $1.50</li>
+      <li>Rice Krispies - $0.99 <button onclick="addToCart('Rice Krispies ($0.99)')">Add to Cart</button></li>
+      <li>Chocolate Chip Cookies - $0.99 <button onclick="addToCart('Chocolate Chip Cookies ($0.99)')">Add to Cart</button></li>
+      <li>Goldfish - $1.50 <button onclick="addToCart('Goldfish ($1.50)')">Add to Cart</button></li>
+      <li>Doritos Red - $1.50 <button onclick="addToCart('Doritos Red ($1.50)')">Add to Cart</button></li>
+      <li>Doritos Blue - $1.50 <button onclick="addToCart('Doritos Blue ($1.50)')">Add to Cart</button></li>
+      <li>Cheddar Popcorn - $0.99 <button onclick="addToCart('Cheddar Popcorn ($0.99)')">Add to Cart</button></li>
+      <li>Lays - $0.99 <button onclick="addToCart('Lays ($0.99)')">Add to Cart</button></li>
+      <li>Barbecue Lays - $1.50 <button onclick="addToCart('Barbecue Lays ($1.50)')">Add to Cart</button></li>
     </ul>
   </main>
 </body>
