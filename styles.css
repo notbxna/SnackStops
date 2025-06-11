@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+  color: #333;
+}
+
+nav {
+  background: #ffb347;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header.banner {
+  text-align: center;
+  padding: 2em;
+  background: #ffe0b2;
+}
+
+main {
+  padding: 2em;
+}
+
+h2, h3 {
+  color: #d35400;
+}
+
+form label, form fieldset {
+  display: block;
+  margin: 1em 0;
+}
+
+form input[type="text"], form select {
+  width: 100%;
+  padding: 0.5em;
+}
+
+form button {
+  background: #ff7f50;
+  color: #fff;
+  border: none;
+  padding: 0.75em;
+  cursor: pointer;
+}
