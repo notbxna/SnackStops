@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SnackStop - Cart</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="orders.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="food.html">Food</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="custom.html">Custom</a>
+  </nav>
+  <main>
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+
+    <form id="checkoutForm">
+      <label>What Time? <input type="text" name="time" required /></label>
+      <label>Where? <input type="text" name="location" required /></label>
+      <label>Name? <input type="text" name="name" required /></label>
+      <button type="submit">Submit Order</button>
+    </form>
+  </main>
+</body>
+</html>
